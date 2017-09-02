@@ -47,3 +47,9 @@ identity = lambda x: x
 
 # Test
 assert composition(double, identity)(6) == composition(identity, double)(6) == double(6)
+
+
+"""
+Observations:
+We can make composition generic so instead of one argument, it works with arbitary arguments, both positional and keywords
+"""
