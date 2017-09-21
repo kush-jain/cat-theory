@@ -1,13 +1,11 @@
 """
 https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/
-"""
 
-"""
 Notes:
 1. Category is simply collection of objects and arrows that go between them
 2. Arrows could be understood as functions or morphisms.
 3. Composition: g(f(A)) or g.f if f: A->B and g: B->C
-4. Proerties of Composition:
+4. Properties of Composition:
     A. Associative: h.g.f == (h.g).f == h.(g.f)
     B. There exists identity function: f.id = id.f = f
 5. TIP: Your composition should be such that its Surface Area increases slower than its volume.
@@ -18,8 +16,9 @@ The Idea being that once implemented, we should not be looking inside the object
 """
 Challenges
 
-1. Implement, as best as you can, the identity function in your favorite language (or the second favorite, if your favorite language happens to be Haskell).
-2. Implement the composition function in your favorite language. It takes two functions as arguments and returns a function that is their composition.
+1. Implement, as best as you can, the identity function in your favorite language.
+2. Implement the composition function in your favorite language. 
+It takes two functions as arguments and returns a function that is their composition.
 3. Write a program that tries to test that your composition function respects identity.
 4. Is the world-wide web a category in any sense? Are links morphisms?
 5. Is Facebook a category, with people as objects and friendships as morphisms?
@@ -31,6 +30,7 @@ Challenges
 double = lambda x: x*2
 def inc_1(x): 
     return x+1
+
 
 # Compose: func2.func1
 def composition(func1, func2):
@@ -51,5 +51,5 @@ assert composition(double, identity)(6) == composition(identity, double)(6) == d
 
 """
 Observations:
-We can make composition generic so instead of one argument, it works with arbitary arguments, both positional and keywords
+We can make composition generic so instead of one argument, it works with arbitrary arguments, both positional and keywords
 """
